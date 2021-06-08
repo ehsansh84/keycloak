@@ -1,0 +1,12 @@
+version: '3'
+services:
+  portainer:
+    container_name: keycloak
+    image: jboss/keycloak
+    restart: unless-stopped
+    ports:
+            - 8080:8080
+    environment:
+      KEYCLOAK_USER: admin              
+      KEYCLOAK_PASSWORD: admin              
+
